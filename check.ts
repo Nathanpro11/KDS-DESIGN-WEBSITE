@@ -1,0 +1,1 @@
+import { prisma } from './src/lib/prisma'; // Sans le sous-dossier ./src/lib/prisma direct
