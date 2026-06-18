@@ -12,7 +12,7 @@ export default async function AdminDashboard() {
   // ... le reste de votre code reste identique
 
     // Conversion des prix pour TypeScript
-    const safeProducts = products.map(p => ({
+    const safeProducts = products.map((p:any) => ({
         ...p,
         price: Number(p.price)
     }));
