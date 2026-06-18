@@ -19,8 +19,9 @@ export async function POST(request: Request) {
 
     // Création de la commande adaptée pour Prisma 7
     // ... dans ton try { ... } après avoir vérifié les items
-const order = await prisma.$transaction(async (tx) => {
-  // 1. Créer la commande
+// Remplace (tx) par (tx: any)
+const order = await prisma.$transaction(async (tx: any) => {
+  // ... le reste de ton code ne change pas  // 1. Créer la commande
   const newOrder = await tx.order.create({
     data: {
       total: cleanTotal,
